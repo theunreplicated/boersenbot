@@ -16,6 +16,8 @@ class NetCurl{
             curl_setopt($ch,CURLOPT_POSTFIELDS, $pq);
                       
         }
+        if(preg_match('~^https~',$url)){
+                        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);}
         curl_setopt($ch,CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         if($header){curl_setopt($ch,CURLOPT_HEADER,$header);}

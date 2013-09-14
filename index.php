@@ -9,5 +9,5 @@ require './includes/NetConnection/netconnection.php';
 //validator::__init(new ErrorHandler());
 //validator::assertEquals('fsdfds','ds');
 $net=  NetConnection::init();
-echo $net->request('http://google.com');
+echo $net->request('http://www.google.com');
 ?>
