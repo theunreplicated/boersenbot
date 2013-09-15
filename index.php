@@ -12,5 +12,5 @@ require './shares_sources/boerse-stuttgart.php';
 $net=  NetConnection::init();
 //echo $net->request('http://www.google.com');
 $bs= new BoerseStuttgart($net);
-$bs->getdata('AAPL.NAS');
+$bs->getLatestKnownValue('AAPL.NAS');
 ?>
